@@ -1,0 +1,161 @@
+{
+  "accounts": [
+    {
+      "image": "/imageurl.jpg",
+      "balance": 69650,
+      "currency": "₽",
+      "interestRate": 8,
+      "number": 57890456,
+      "creationDate": "23 января 13:55",
+      "operations": [
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Макдоналдс",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 315"
+        },
+        {
+          "name": "Пополнение карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Снятие с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 3500"
+        },
+        {
+          "name": "Выплата процентов",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 827"
+        },
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        }
+      ]
+    },
+    {
+      "image": "/imageurl.jpg",
+      "balance": 21500,
+      "currency": "$",
+      "interestRate": 8,
+      "number": 57890456,
+      "creationDate": "23 января 13:55",
+      "operations": [
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Макдоналдс",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 315"
+        },
+        {
+          "name": "Пополнение карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Снятие с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 3500",
+          "currency": "$"
+        },
+        {
+          "name": "Выплата процентов",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 827"
+        },
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        }
+      ]
+    },
+    {
+      "image": "/imageurl.jpg",
+      "balance": 69650,
+      "currency": "₽",
+      "interestRate": 8,
+      "number": 57890456,
+      "creationDate": "23 января 13:55",
+      "operations": [
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Макдоналдс",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 315"
+        },
+        {
+          "name": "Пополнение карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        },
+        {
+          "name": "Снятие с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "- 3500",
+          "currency": "$"
+        },
+        {
+          "name": "Выплата процентов",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 827"
+        },
+        {
+          "name": "Пополнение с карты",
+          "image": "/imageurl.jpg",
+          "date": "23 января 13:55",
+          "value": "+ 1530"
+        }
+      ]
+    }
+  ],
+  "deposits": [
+    {
+      "name": "Тусовочный",
+      "cashback": 10,
+      "period": "1 год"
+    },
+    {
+      "name": "АнтиТинькофф",
+      "cashback": 60,
+      "period": "10 лет"
+    },
+    {
+      "name": "Студенческий",
+      "cashback": 6,
+      "period": "6 лет"
+    }
+  ]
+}
