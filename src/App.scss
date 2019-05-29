@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+h1,h2,div,p,nav,aside,main,textarea,a,ul{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,p,a,textarea{
+  font: 16px/1.25 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+// main
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+// chat
+.chat{
+  flex-basis: 100%;
+  background-color: #656565f2;
+}
+
+// panel
+.panel{
+  flex: 0 0 100px;
+  padding: 16px 20px 20px 30px;
+  background-color: #333333;
+}
+
+.panel-btns{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.panel-btns__item,
+.panel-message__btn{
+  flex-basis: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.panel-btns__item{
+  &_text{
+    background: red;
+  }
+  &_stickers{
+    background: orange;
+  }
+  &_pictures{
+    background: lightpink
+  }
+  &_docs{
+    background: aqua
+  }
+
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.panel-message{
+  display: flex;
+
+  &__area{
+    width: 100%;
+    height: 24px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    resize: none;
+  
+    &:focus{
+      outline: none;
+    }
+  }
+
+  &__btn{
+    margin-left: 20px;
+    background: palevioletred;
+  }
+}
+
+
+
+// aside
+
+.aside{
+  position: relative;
+  flex-basis: 386px;
+  flex-shrink: 0;
+  background-color: #f6f6f6;
+}
+
+.aside-main{
+  position: relative;
+  overflow-y: scroll;
+  padding: 60px;
+  height: 100%;
+}
+
+.aside-main nav{
+  margin-bottom: 30px;
+
+  & > ul{
+    display: flex;
+    list-style: none;
+  
+    & li:first-of-type{
+      margin-right: 30px; 
+    }
+  
+    a{
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
