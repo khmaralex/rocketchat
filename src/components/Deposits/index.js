@@ -1,18 +1,24 @@
 import React from 'react';
+import Deposit from 'components/Deposit';
 
 export default function Deposits() {
   return (
     <div className="deposits">
-      <div className="deposit">
-        <div className="deposit__name">Тусовочный</div>
-        <div className="deposit__cashback">10 %</div>
-        <div className="deposit__period">2 года</div>
-      </div>
-      <div className="deposit">
-        <div className="deposit__name">Студенческий</div>
-        <div className="deposit__cashback">2 %</div>
-        <div className="deposit__period">2 года</div>
-      </div>
+      <Deposit deposit={{
+        name: 'Тусовочный',
+        cashback: '10%',
+        period: '2 года'
+      }}/>
+      <Deposit deposit={{
+        name: 'Студенческий',
+        cashback: '2 %',
+        period: '2 года'
+      }}/>
+      <Deposit deposit={{
+        name: 'Молодежный',
+        cashback: '8%',
+        period: '1 год'
+      }}/>
     </div>
   );
 }

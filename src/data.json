@@ -5,7 +5,7 @@
       "balance": 69650,
       "currency": "₽",
       "interestRate": 8,
-      "number": 57890456,
+      "id": 57890456,
       "creationDate": "23 января 13:55",
       "operations": [
         {
@@ -51,7 +51,7 @@
       "balance": 21500,
       "currency": "$",
       "interestRate": 8,
-      "number": 57890456,
+      "id": 57890456,
       "creationDate": "23 января 13:55",
       "operations": [
         {
@@ -98,7 +98,7 @@
       "balance": 69650,
       "currency": "₽",
       "interestRate": 8,
-      "number": 57890456,
+      "id": 57890456,
       "creationDate": "23 января 13:55",
       "operations": [
         {
