@@ -1,0 +1,11 @@
+.chat{
+  position: relative;
+  flex-basis: 100%;
+  background-color: #656565f2;
+  overflow-y: scroll;
+  padding: 30px;
+
+  &-inner > div:not(:last-child){
+    margin-bottom: 15px;
+  }
+}

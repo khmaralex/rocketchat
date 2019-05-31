@@ -1,0 +1,65 @@
+.message-group{
+  &__author{
+    margin-left: 40px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+
+  &__author-icon{
+    position: relative;
+    flex: 0 0 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    & > div:not(:last-child){
+      margin-bottom: 5px;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+  }
+
+  &__author-icon{
+
+  }
+
+  &__inner{
+
+  }
+
+
+  &.message-group_user{
+
+    .message-group__inner{
+      & > div{
+        color: white;
+        background: #333333;
+      }
+    }
+
+    .message-group__wrapper{
+      justify-content: flex-end;
+    }
+
+    .message-group__author-icon,
+    .message-group__author{
+      display: none;
+    }
+
+    .message-group__inner{
+      align-items: flex-end;
+    }
+  }
+}
