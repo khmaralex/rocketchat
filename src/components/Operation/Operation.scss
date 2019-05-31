@@ -1,0 +1,57 @@
+.operation{
+  display: flex;
+  border-radius: 6px;
+  padding: 15px 10px 15px 15px;
+  cursor: pointer;
+  user-select: none;
+
+  &__icon{
+    flex: 0 0 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #eeeeee;
+  }
+
+  &__info{
+    width: 100%;
+  }
+  
+  &__info-name,
+  &__value{
+    font-size: 12px;
+  }
+
+  &__info-name{
+    margin-bottom: 5px;
+  }
+
+  &__value{
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  &__info-date{
+    font-size: 14px;
+    color: #b2b2b2;
+  }
+
+  &__send-btn{
+    position: relative;
+    top: -5px;
+    flex: 0 0 24px;
+    margin-left: 10px;
+    height: 24px;
+    background: url('./images/ico-chat.svg') center / contain no-repeat;
+    opacity: 0;
+  }
+
+
+  &:hover{
+    background-color: #ebebeb;
+
+    .operation__send-btn{
+      opacity: 1
+    }
+  }
+}

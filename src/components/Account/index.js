@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './Account.scss';
 
-export default function Account(props) {
+export default function Account({account, isDisclosureButton}) {
   return (
     <div className="account">
       <div className="account-image" />
@@ -19,7 +19,12 @@ export default function Account(props) {
         </p>
       </div>
 
-      <Link className="account-disclousure-btn" to={`/accounts/${props.account.id}`} />
+      {isDisclosureButton && (
+        <Link
+          className="account-disclousure-btn"
+          to={`/accounts/${account.id}`}
+        />
+      )}
     </div>
   );
 }

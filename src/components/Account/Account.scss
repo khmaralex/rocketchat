@@ -10,7 +10,8 @@
   flex: 0 0 48px;
   height: 36px;
   margin-right: 20px;
-  background: white;
+  background: url('./images/pic-account-1.svg') no-repeat center;
+  border-radius: 0 15px 0 0;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15)
 }
 
@@ -42,5 +43,10 @@
   flex: 0 0 35px;
   height: 35px;
   border-radius: 50%;
-  background: #eeeeee;
+  background: url('./images/ico-disclosure.svg') no-repeat center;
+  transition: transform 0.15s ease;
+
+  &:hover{
+    transform: scale(1.2);
+  }
 }

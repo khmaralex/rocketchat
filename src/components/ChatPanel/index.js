@@ -13,6 +13,7 @@ export default function ChatPanel(params) {
 
       <div className="chat-panel-message">
         <textarea
+          spellcheck="false"
           className="chat-panel-message__area"
           placeholder="Введите сообщение..."
         />

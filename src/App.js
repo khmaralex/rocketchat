@@ -1,12 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Accounts from "components/Accounts";
-import AccountView from "components/AccountView";
+import AsidePopup from "components/AsidePopup";
 import Deposits from "components/Deposits";
 import Chat from "components/Chat";
 import ChatPanel from "components/ChatPanel";
 import AsideMainNav from "components/AsideMainNav";
-
 import "./App.scss";
 
 
@@ -34,7 +33,7 @@ function App(props) {
             </div>
           </div>
 
-          <Route path="/accounts/:accountId" component={AccountView} />
+          <Route path="/(accounts|deposits)/:id" component={AsidePopup} />
         </aside>
       </div>
     </Router>

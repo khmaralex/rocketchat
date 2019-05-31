@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './AsideMainNav.scss';
 
 export default function AsideMainNav(params) {
@@ -7,10 +7,10 @@ export default function AsideMainNav(params) {
     <nav className="aside-main-nav">
       <ul>
         <li>
-          <Link to="/accounts">Счета</Link>
+          <NavLink to="/accounts" activeClassName="active">Счета</NavLink>
         </li>
         <li>
-          <Link to="/deposits">Вклады</Link>
+          <NavLink to="/deposits" activeClassName="active">Вклады</NavLink>
         </li>
       </ul>
     </nav>
