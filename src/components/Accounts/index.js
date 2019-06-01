@@ -2,14 +2,17 @@ import React from "react";
 import './Accounts.scss';
 import Account from 'components/Account';
 
-export default function Accounts() {
+const Accounts = ({ accounts }) => {
+  const isAccounts = !!accounts.length;
   return (
-    <div className="accounts">
-      <Account account={{id: 123}} isDisclosureButton={true} />
-      <Account account={{id: 323}} isDisclosureButton={true}/>
-      <Account account={{id: 315}} isDisclosureButton={true}/>
-      <Account account={{id: 323}} isDisclosureButton={true}/>
-      <Account account={{id: 333}} isDisclosureButton={true}/>
-    </div>
+    isAccounts && (
+      <div className="accounts">
+        {accounts.map(account => {
+          return <Account key={account.id} account={account} isDisclosureButton={true} />;
+        })}
+      </div>
+    )
   );
 }
+
+export default Accounts;

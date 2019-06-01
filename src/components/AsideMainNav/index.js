@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import './AsideMainNav.scss';
 
-export default function AsideMainNav(params) {
+const AsideMainNav = () => {
   return (
     <nav className="aside-main-nav">
       <ul>
@@ -16,3 +16,6 @@ export default function AsideMainNav(params) {
     </nav>
   );
 }
+
+
+export default AsideMainNav;

@@ -1,24 +1,18 @@
 import React from 'react';
 import Deposit from 'components/Deposit';
 
-export default function Deposits() {
+const Deposits = ({deposits}) => {
+  const isDeposits = !!deposits.length;
+
   return (
-    <div className="deposits">
-      <Deposit deposit={{
-        name: 'Тусовочный',
-        cashback: '10%',
-        period: '2 года'
-      }}/>
-      <Deposit deposit={{
-        name: 'Студенческий',
-        cashback: '2 %',
-        period: '2 года'
-      }}/>
-      <Deposit deposit={{
-        name: 'Молодежный',
-        cashback: '8%',
-        period: '1 год'
-      }}/>
-    </div>
+    isDeposits && (
+      <div className="deposits">
+        {deposits.map(deposit => {
+          return <Deposit deposit={deposit}/>
+        })}
+      </div>
+    )
   );
 }
+
+export default Deposits;

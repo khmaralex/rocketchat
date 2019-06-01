@@ -1,0 +1,9 @@
+.aside-main-view{
+  padding: 0 60px 60px;
+  overflow-y: scroll;
+  height: 100%;
+
+  &__inner{
+    padding-top: 10px;
+  }
+}

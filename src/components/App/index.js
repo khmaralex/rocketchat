@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Chat from "components/Chat";
-import ChatPanel from "components/ChatPanel";
+import ChatPanelContainer from "containers/ChatPanelContainer";
 import AsideMain from 'components/AsideMain';
 import AsidePopup from "components/AsidePopup";
 import "./App.scss";
@@ -16,14 +16,13 @@ const App = () => {
       <div className="app">
         <main className="main">
           <Chat />
-          <ChatPanel />
+          <ChatPanelContainer />
         </main>
 
         <aside className="aside">
           <AsideMain/>
           <Route path="/(accounts|deposits)/:id" component={AsidePopup} />
         </aside>
-        
       </div>
     </Router>
   );

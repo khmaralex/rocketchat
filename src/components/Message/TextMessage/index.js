@@ -1,7 +1,7 @@
 import React from "react";
 import './TextMessage.scss';
 
-export default function TextMessage() {
+const TextMessage = () => {
   return (
     <div className="text-message">
       <p>Да вот снова логотип не отображается</p>
@@ -9,3 +9,4 @@ export default function TextMessage() {
   );
 }
 
+export default TextMessage;

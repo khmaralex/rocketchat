@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatPanel.scss';
 
-export default function ChatPanel(params) {
+const ChatPanel = ({message,onChange,submitMessage,onKeyPress}) => {
   return(
     <div className="chat-panel">
       <div className="chat-panel-btns">
@@ -13,13 +13,18 @@ export default function ChatPanel(params) {
 
       <div className="chat-panel-message">
         <textarea
-          spellCheck="false"
           className="chat-panel-message__area"
+          value={message}
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+          spellCheck="false"
           placeholder="Введите сообщение..."
         />
 
-        <div className="chat-panel-message__btn" />
+        <div className="chat-panel-message__btn" onClick={submitMessage} />
       </div>
     </div>
-  )
+  );
 }
+
+export default ChatPanel;

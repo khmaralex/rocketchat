@@ -1,17 +1,19 @@
 import React from 'react';
 import './AsidePopup.scss';
-import AccountView from 'components/AccountView';
+import AccountViewContainer from 'containers/AccountViewContainer';
 import { Route } from "react-router-dom";
 
-export default function AsidePopup({history}){
+const AsidePopup = ({history}) => {
   function goBack() {
     history.goBack();
   }
   
   return(
     <div className="aside-popup">
-      <Route path="/accounts/:id" component={AccountView}/>
+      <Route path="/accounts/:id" component={AccountViewContainer}/>
       <div className="aside-popup__close-btn" onClick={goBack}></div>
     </div>
   ) 
 }
+
+export default AsidePopup;

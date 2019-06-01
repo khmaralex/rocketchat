@@ -2,7 +2,7 @@ import React from 'react';
 import MessageGroup from 'components/MessageGroup';
 import './Chat.scss';
 
-export default function Chat(params) {
+const Chat = () => {
   return(
     <div className="chat">
       <div className="chat-inner">
@@ -15,3 +15,5 @@ export default function Chat(params) {
     </div>
   )
 }
+
+export default Chat;

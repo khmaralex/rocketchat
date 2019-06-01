@@ -1,7 +1,7 @@
 import React from "react";
 import './OperationMessage.scss';
 
-export default function OperationMessage() {
+const OperationMessage = () => {
   return(
     <div className="operation-message">
       <div className="operation-message__icon"></div>
@@ -11,3 +11,5 @@ export default function OperationMessage() {
     </div>
   );
 }
+
+export default OperationMessage;

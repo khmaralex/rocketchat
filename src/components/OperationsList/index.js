@@ -1,29 +1,14 @@
 import React from 'react';
-import Operation from 'components/Operation';
+import OperationContainer from 'containers/OperationContainer';
 
-export default function OperationsList() {
+const OperationsList = ({operations}) => {
   return(
     <div className="operations-list">
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
-      <Operation/>
+      {operations.map(operation =>
+        <OperationContainer key={operation.id} operation={operation}/>
+      )}
     </div>
   );
 }
+
+export default OperationsList;

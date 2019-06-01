@@ -1,25 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="36" viewBox="0 0 48 36">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="36px" viewBox="0 0 48 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>pic-account-1 2</title>
+    <desc>Created with Sketch.</desc>
     <defs>
-        <path id="a" d="M0 2C0 .895.89 0 2 0h34l12 12v21.995A2.002 2.002 0 0 1 45.999 36H2A1.997 1.997 0 0 1 0 34V2z"/>
-        <filter id="b" width="172.9%" height="197.2%" x="-36.5%" y="-34.7%" filterUnits="objectBoundingBox">
-            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
-            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-        </filter>
-        <path id="d" d="M36 0h12v12h-9.991A2.01 2.01 0 0 1 36 9.991V0z"/>
+        <path d="M-2.2600348e-06,2 C0,0.895 0.89,0 1.99999774,0 L35.9999977,0 L47.9999977,12 L48,33.995 C48.0007962,34.5263098 47.7903607,35.0361457 47.4150428,35.4122138 C47.039725,35.7882819 46.5303103,35.9997352 45.999,36 L1.99999774,36 C1.46932284,36.0007978 0.960151342,35.7903403 0.584905501,35.4150945 C0.209659661,35.0398487 -0.000797812163,34.5306772 -2.2600348e-06,34 L-2.2600348e-06,2 Z" id="path-1"></path>
+        <path d="M-2.2600348e-06,2 C0,0.895 0.89,0 1.99999774,0 L35.9999977,0 L47.9999977,12 L48,33.995 C48.0007962,34.5263098 47.7903607,35.0361457 47.4150428,35.4122138 C47.039725,35.7882819 46.5303103,35.9997352 45.999,36 L1.99999774,36 C1.46932284,36.0007978 0.960151342,35.7903403 0.584905501,35.4150945 C0.209659661,35.0398487 -0.000797812163,34.5306772 -2.2600348e-06,34 L-2.2600348e-06,2 Z" id="path-3"></path>
     </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="c" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <use fill="#000" filter="url(#b)" xlink:href="#a"/>
-        <use fill="#FFF" xlink:href="#a"/>
-        <g mask="url(#c)">
-            <use fill="#FFF" xlink:href="#d"/>
-            <use fill="#FDAFA4" xlink:href="#d"/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pic-account-1-2">
+            <g id="pic-account-1">
+                <g id="a-link" fill="#000000" fill-rule="nonzero">
+                    <path d="M-2.2600348e-06,2 C0,0.895 0.89,0 1.99999774,0 L35.9999977,0 L47.9999977,12 L48,33.995 C48.0007962,34.5263098 47.7903607,35.0361457 47.4150428,35.4122138 C47.039725,35.7882819 46.5303103,35.9997352 45.999,36 L1.99999774,36 C1.46932284,36.0007978 0.960151342,35.7903403 0.584905501,35.4150945 C0.209659661,35.0398487 -0.000797812163,34.5306772 -2.2600348e-06,34 L-2.2600348e-06,2 Z" id="a"></path>
+                </g>
+                <g id="a-link" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M-2.2600348e-06,2 C0,0.895 0.89,0 1.99999774,0 L35.9999977,0 L47.9999977,12 L48,33.995 C48.0007962,34.5263098 47.7903607,35.0361457 47.4150428,35.4122138 C47.039725,35.7882819 46.5303103,35.9997352 45.999,36 L1.99999774,36 C1.46932284,36.0007978 0.960151342,35.7903403 0.584905501,35.4150945 C0.209659661,35.0398487 -0.000797812163,34.5306772 -2.2600348e-06,34 L-2.2600348e-06,2 Z" id="a"></path>
+                </g>
+                <g id="Clipped">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="a"></g>
+                    <g id="Group" mask="url(#mask-2)">
+                        <g transform="translate(36.000000, 0.000000)" id="d-link">
+                            <g>
+                                <path d="M0,0 L12,0 L12,12 L2.009,12 C0.899688564,11.9994482 0.000551759086,11.1003114 0,9.991 L0,0 Z" id="d" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            </g>
+                            <g>
+                                <path d="M0,0 L12,0 L12,12 L2.009,12 C0.899688564,11.9994482 0.000551759086,11.1003114 0,9.991 L0,0 Z" id="d" fill="#FDAFA4" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Clipped">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="a"></g>
+                </g>
+            </g>
         </g>
-        <text fill="#333" font-family="AppleColorEmoji, Apple Color Emoji" font-size="14" mask="url(#c)">
-            <tspan x="15" y="24">⛵️</tspan>
-        </text>
     </g>
 </svg>

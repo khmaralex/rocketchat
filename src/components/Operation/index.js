@@ -1,19 +1,25 @@
 import React from 'react';
 import './Operation.scss';
 
-export default function Operation() {
+const Operation = ({operation, sendOperationMessage}) => {
+
   return(
-    <div className="operation">
+    <div
+      className="operation"
+      onClick={() => sendOperationMessage(operation)}
+    >
       <div className="operation__icon"></div>
 
       <div className="operation__info">
-        <p className="operation__info-name">Пополнение с карты </p>
-        <p className="operation__info-date">8 марта 19:21</p>
+        <p className="operation__info-name">{operation.name}</p>
+        <p className="operation__info-date">{operation.date}</p>
       </div>
 
-      <p className="operation__value">+ 134 500 ₽</p>
+      <p className="operation__value">{operation.value} ₽</p>
 
       <div className="operation__send-btn"></div>
     </div>
   );
 }
+
+export default Operation;

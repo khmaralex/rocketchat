@@ -2,9 +2,9 @@ import {GET_INITIAL_DATA_PENDING, GET_INITIAL_DATA_SUCCESS } from 'actions/const
 
 let initialState = {
   isDataLoading: false,
-  accounts: {},
-  deposits: {},
-  messages: {}
+  accounts: [],
+  deposits: [],
+  messages: []
 };
 
 const userDataReducer = (state = initialState, action) => {

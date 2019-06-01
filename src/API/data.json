@@ -1,140 +1,158 @@
 {
   "accounts": [
     {
-      "image": "/imageurl.jpg",
+      "image": "",
       "balance": 69650,
       "currency": "₽",
       "interestRate": 8,
-      "id": 57890456,
+      "id": 57891231,
       "creationDate": "23 января 13:55",
       "operations": [
         {
+          "id": 1,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 июня 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 2,
           "name": "Макдоналдс",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 июля 13:55",
           "value": "- 315"
         },
         {
+          "id": 3,
           "name": "Пополнение карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 августа 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 4,
           "name": "Снятие с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 сентября 13:55",
           "value": "- 3500"
         },
         {
+          "id": 5,
           "name": "Выплата процентов",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 ноября 13:55",
           "value": "+ 827"
         },
         {
+          "id": 6,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
-          "value": "+ 1530"
+          "image": "",
+          "date": "21 декабря 13:55",
+          "value": "+ 230"
         }
       ]
     },
     {
-      "image": "/imageurl.jpg",
+      "image": "",
       "balance": 21500,
       "currency": "$",
       "interestRate": 8,
-      "id": 57890456,
+      "id": 2241256,
       "creationDate": "23 января 13:55",
       "operations": [
         {
+          "id": 7,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 мая 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 8,
           "name": "Макдоналдс",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 мая 13:55",
           "value": "- 315"
         },
         {
+          "id": 9,
           "name": "Пополнение карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 июня 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 10,
           "name": "Снятие с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 августа 13:55",
           "value": "- 3500",
           "currency": "$"
         },
         {
+          "id": 11,
           "name": "Выплата процентов",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
+          "image": "",
+          "date": "23 сентября 13:55",
           "value": "+ 827"
         },
         {
+          "id": 12,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
-          "date": "23 января 13:55",
-          "value": "+ 1530"
+          "image": "",
+          "date": "16 ноября 13:55",
+          "value": "- 2030"
         }
       ]
     },
     {
-      "image": "/imageurl.jpg",
+      "image": "",
       "balance": 69650,
       "currency": "₽",
       "interestRate": 8,
-      "id": 57890456,
+      "id": 5333856411,
       "creationDate": "23 января 13:55",
       "operations": [
         {
+          "id": 13,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 14,
           "name": "Макдоналдс",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "- 315"
         },
         {
+          "id": 15,
           "name": "Пополнение карты",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "+ 1530"
         },
         {
+          "id": 16,
           "name": "Снятие с карты",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "- 3500",
           "currency": "$"
         },
         {
+          "id": 17,
           "name": "Выплата процентов",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "+ 827"
         },
         {
+          "id": 18,
           "name": "Пополнение с карты",
-          "image": "/imageurl.jpg",
+          "image": "",
           "date": "23 января 13:55",
           "value": "+ 1530"
         }

@@ -2,7 +2,7 @@ import React from "react";
 import Message from 'components/Message';
 import './MessageGroup.scss';
 
-export default function MessageGroup({authorType}) {
+const MessageGroup = ({authorType}) => {
   const isUserMessageGroup = (authorType === 'user') ? ` message-group_user` : '';
 
   return(
@@ -22,3 +22,5 @@ export default function MessageGroup({authorType}) {
     </div>
   );
 };
+
+export default MessageGroup;
