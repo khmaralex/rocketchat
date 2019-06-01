@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
-import AsidePopup from "components/AsidePopup";
 import Chat from "components/Chat";
 import ChatPanel from "components/ChatPanel";
-
 import AsideMain from 'components/AsideMain';
+import AsidePopup from "components/AsidePopup";
 import "./App.scss";
 
-function App() {
+const App = () => {
   const redirectToAccounts = () => <Redirect to="/accounts" />;
 
   return (

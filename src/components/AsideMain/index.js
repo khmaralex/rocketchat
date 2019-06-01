@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import AsideMainNav from "components/AsideMainNav";
 import Accounts from "components/Accounts";
 import Deposits from "components/Deposits";
+import './AsideMain.scss';
 
 const AsideMain = () => {
   return(

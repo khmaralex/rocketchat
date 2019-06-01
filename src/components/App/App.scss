@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.aside{
+  position: relative;
+  flex-basis: 386px;
+  flex-shrink: 0;
+  background-color: #f6f6f6;
+}

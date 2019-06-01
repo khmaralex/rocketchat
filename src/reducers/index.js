@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import accounts from './accounts';
-import deposits from './deposits';
+import userData from './userDataReducer';
+import chatReducer from './chatReducer';
 
-const rootReducer = combineReducers({ accounts, deposits });
+const rootReducer = combineReducers({ userData, chatReducer });
 
 export default rootReducer;
