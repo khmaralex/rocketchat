@@ -1,19 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import Operation from "components/Operation";
-import {userSentMessage} from "actions";
-import {v4 as getId} from 'uuid';
+import { userSentMessage } from "actions";
+import { v4 as getId } from "uuid";
 
-const OperationContainer = ({ operation, submitMessage }) => {
-  const sendOperationMessage = operation => {
-    submitMessage({
-      type: "operation",
-      authorType: "user",
-      messageData: operation,
-      id: getId()
-    });
-  };
-
+const OperationContainer = ({ operation, sendOperationMessage }) => {
   return (
     <Operation
       operation={operation}
@@ -24,7 +15,16 @@ const OperationContainer = ({ operation, submitMessage }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    submitMessage: message => dispatch(userSentMessage(message))
+    sendOperationMessage: operation => {
+      dispatch(
+        userSentMessage({
+          type: "operation",
+          authorType: "user",
+          messageData: operation,
+          id: getId()
+        })
+      );
+    }
   };
 };
 

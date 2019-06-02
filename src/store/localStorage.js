@@ -1,6 +1,8 @@
+const LOCAL_STORAGE_KEY = 'chatState';
+
 export const loadState = () => {
   try {
-    let serializedChatState = localStorage.getItem("chatState");
+    let serializedChatState = localStorage.getItem(LOCAL_STORAGE_KEY);
 
     if (serializedChatState === null) {
       return undefined;

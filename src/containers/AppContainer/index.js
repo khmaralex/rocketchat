@@ -15,7 +15,7 @@ class AppContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getAppData: function() {
+    getAppData: () => {
       dispatch(getInitialData());
     }
   };

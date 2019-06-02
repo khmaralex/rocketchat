@@ -14,7 +14,6 @@ class ChatPanelContainer extends React.Component {
   }
 
   resetMessages(){
-    localStorage.removeItem('chatState');
     this.props.resetMessages();
   }
 
