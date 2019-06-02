@@ -1,0 +1,52 @@
+.stickers{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 60px;
+  left: -50px;
+  width: 270px;
+  opacity: 0;
+  visibility: hidden;
+  background: #f6f6f6;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.31);
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1;
+
+  &::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 110%;
+    height: 80px;
+    bottom: -37px;
+    left: -5%;
+    z-index: -1;
+  }
+
+  &::after{
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: -8px;
+    left: 48px;
+    background: #f6f6f6;
+    border-radius: 6px;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+}
+
+.sticker{
+  width: 33.3333333%;
+  height: 33.3333333%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #ebebeb;
+  }
+}

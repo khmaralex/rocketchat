@@ -22,7 +22,8 @@ class ClientBot {
       "...поищи операцию в счетах, пожалуйста",
       "Это не то, что хотелось бы сейчас увидеть 🤔",
       "Мдааа... 🤯! Это оно! Спасибо.",
-      "Сейчас не могу ответить, занят. [Автоответчик]"
+      "Сейчас не могу ответить, занят. [Автоответчик]",
+      "Ясно, это та самая лягушка Пепе из комикса Boy’s Club"
     ];
   }
 
@@ -41,54 +42,50 @@ class ClientBot {
     return message;
   }
 
-  getAnswerAfterOperationMessage(message) {
-    return {
-      ...message,
-      authorType: this.authorType,
-      id: getId()
-    };
-  }
-
   thinkAboutMessage(message) {
     return new Promise(resolve => {
       let answer;
 
-      if (this.state.isGreeted && !this.state.isProblemRequested) {
-        answer = this.createMessage(this.replicas[1], "text");
-        this.state.isProblemRequested = true;
-      } else if (
-        this.state.isProblemRequested &&
-        !this.state.isOperationRequested
-      ) {
-        answer = this.createMessage(this.replicas[2], "text");
-        this.state.isOperationRequested = true;
-      } else if (
-        this.state.isOperationRequested &&
-        !this.state.isProblemSolved
-      ) {
-        if (message.type === "text") {
-          answer = this.createMessage(this.replicas[3], "text");
-        } else {
-          let isSameOperation = message.messageData.id === 18;
-
-          if (isSameOperation) {
-            answer = this.createMessage(this.replicas[5], "text");
-            this.state.isProblemSolved = true;
-            this.state.isResult = true;
-          } else {
-            answer = this.createMessage(this.replicas[4], "text");
-          }
-        }
-      } else if (this.state.isProblemSolved && !this.state.isResult) {
-        answer = this.createMessage(this.replicas[5], "text");
-      } else {
-        if (this.state.isGreeted === false) {
-          this.state.isGreeted = true;
-          this.state.isProblemRequested = true;
+      if(message.type === 'sticker'){
+        answer = this.createMessage(this.replicas[7], "text");
+      }else{
+        if (this.state.isGreeted && !this.state.isProblemRequested) {
           answer = this.createMessage(this.replicas[1], "text");
+          this.state.isProblemRequested = true;
+        } else if (
+          this.state.isProblemRequested &&
+          !this.state.isOperationRequested
+        ) {
+          answer = this.createMessage(this.replicas[2], "text");
+          this.state.isOperationRequested = true;
+        } else if (
+          this.state.isOperationRequested &&
+          !this.state.isProblemSolved
+        ) {
+          if (message.type === "text") {
+            answer = this.createMessage(this.replicas[3], "text");
+          } else {
+            let isSameOperation = message.messageData.id === 18;
+
+            if (isSameOperation) {
+              answer = this.createMessage(this.replicas[5], "text");
+              this.state.isProblemSolved = true;
+              this.state.isResult = true;
+            } else {
+              answer = this.createMessage(this.replicas[4], "text");
+            }
+          }
+        } else if (this.state.isProblemSolved && !this.state.isResult) {
+          answer = this.createMessage(this.replicas[5], "text");
         } else {
-          answer = this.createMessage(this.replicas[6], "text");
-        }
+          if (this.state.isGreeted === false) {
+            this.state.isGreeted = true;
+            this.state.isProblemRequested = true;
+            answer = this.createMessage(this.replicas[1], "text");
+          } else {
+            answer = this.createMessage(this.replicas[6], "text");
+          }
+        } 
       }
 
       setTimeout(() => resolve(answer), this.thinkDelay);

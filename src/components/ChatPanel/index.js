@@ -1,4 +1,5 @@
 import React from 'react';
+import StickersContainer from 'containers/StickersContainer';
 import './ChatPanel.scss';
 
 const ChatPanel = ({ message, onChange, submitMessage, onKeyPress, resetMessages }) => {
@@ -6,7 +7,9 @@ const ChatPanel = ({ message, onChange, submitMessage, onKeyPress, resetMessages
     <div className="chat-panel">
       <div className="chat-panel-btns">
         <div className="chat-panel-btns__item chat-panel-btns__item_text">Aa</div>
-        <div className="chat-panel-btns__item chat-panel-btns__item_stickers" />
+        <div className="chat-panel-btns__item chat-panel-btns__item_stickers">
+          <StickersContainer />
+        </div>
         <div className="chat-panel-btns__item chat-panel-btns__item_pictures" />
         <div className="chat-panel-btns__item chat-panel-btns__item_docs" />
         <div className="chat-panel-btns__item chat-panel-btns__item_trash" onClick={resetMessages} />

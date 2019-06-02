@@ -7,7 +7,8 @@ let initialState = {
   isDataLoading: false,
   accounts: [],
   deposits: [],
-  messages: []
+  messages: [],
+  stickers: []
 };
 
 const userDataReducer = (state = initialState, action) => {

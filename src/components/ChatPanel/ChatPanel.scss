@@ -36,7 +36,13 @@
   }
 
   &_stickers{
+    position: relative;
     background-image: url('./images/ico-sticker.svg');
+    
+    &:hover .stickers{
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &_pictures{
@@ -56,6 +62,7 @@
     margin-right: 20px;
   }
 }
+
 
 .chat-panel-message{
   display: flex;

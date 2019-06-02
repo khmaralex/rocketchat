@@ -3,6 +3,16 @@ import accountImgage2 from './images/pic-account-2.svg';
 import accountImage3 from './images/pic-account-3.svg';
 import operationImage from './images/operation.png';
 
+import sticker1 from './images/stickers/1.png';
+import sticker2 from './images/stickers/2.png';
+import sticker3 from './images/stickers/3.png';
+import sticker4 from './images/stickers/4.png';
+import sticker5 from './images/stickers/5.png';
+import sticker6 from './images/stickers/6.png';
+import sticker7 from './images/stickers/7.png';
+import sticker8 from './images/stickers/8.png';
+import sticker9 from './images/stickers/9.png';
+
 const data = {
   "accounts": [
     {
@@ -181,6 +191,44 @@ const data = {
       "name": "Студенческий",
       "cashback": 6,
       "period": "6 лет"
+    }
+  ],
+  "stickers": [
+    {
+      "id": 1,
+      "image": sticker1,
+    },
+    {
+      "id": 2,
+      "image": sticker2,
+    },
+    {
+      "id": 3,
+      "image": sticker3,
+    },
+    {
+      "id": 4,
+      "image": sticker4,
+    },
+    {
+      "id": 5,
+      "image": sticker5,
+    },
+    {
+      "id": 6,
+      "image": sticker6,
+    },
+    {
+      "id": 7,
+      "image": sticker7,
+    },
+    {
+      "id": 8,
+      "image": sticker8,
+    },
+    {
+      "id": 9,
+      "image": sticker9,
     }
   ]
 }
