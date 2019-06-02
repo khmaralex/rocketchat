@@ -1,8 +1,8 @@
 import React from 'react';
 import './ChatPanel.scss';
 
-const ChatPanel = ({message,onChange,submitMessage,onKeyPress}) => {
-  return(
+const ChatPanel = ({ message, onChange, submitMessage, onKeyPress }) => {
+  return (
     <div className="chat-panel">
       <div className="chat-panel-btns">
         <div className="chat-panel-btns__item chat-panel-btns__item_text">Aa</div>
@@ -25,6 +25,6 @@ const ChatPanel = ({message,onChange,submitMessage,onKeyPress}) => {
       </div>
     </div>
   );
-}
+};
 
 export default ChatPanel;

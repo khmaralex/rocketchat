@@ -3,7 +3,7 @@ import OperationsList from 'components/OperationsList';
 import Account from 'components/Account';
 import './AccountView.scss';
 
-const AccountView = ({account}) => {
+const AccountView = ({ account }) => {
   return (
     <div className="account-view">
       <div className="account-view-header">
@@ -13,7 +13,7 @@ const AccountView = ({account}) => {
       <div className="account-view-body">
         <p className="account-view-body__label">История операций</p>
 
-        <OperationsList operations={account.operations}/>
+        <OperationsList operations={account.operations} />
       </div>
     </div>
   );

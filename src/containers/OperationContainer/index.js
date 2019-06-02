@@ -4,15 +4,15 @@ import Operation from "components/Operation";
 import {userSentMessage} from "actions";
 import {v4 as getId} from 'uuid';
 
-const OperationContainer = ({operation, submitMessage}) => {
-  const sendOperationMessage = (operation) => {
+const OperationContainer = ({ operation, submitMessage }) => {
+  const sendOperationMessage = operation => {
     submitMessage({
-      type: 'operation',
-      authorType: 'user',
+      type: "operation",
+      authorType: "user",
       messageData: operation,
       id: getId()
     });
-  }
+  };
 
   return (
     <Operation
@@ -20,7 +20,7 @@ const OperationContainer = ({operation, submitMessage}) => {
       sendOperationMessage={sendOperationMessage}
     />
   );
-}
+};
 
 const mapDispatchToProps = dispatch => {
   return {

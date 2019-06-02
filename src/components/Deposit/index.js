@@ -2,8 +2,8 @@ import React from 'react';
 import './Deposit.scss';
 
 
-const Deposit = ({deposit}) => {
-  const {name, cashback, period } = deposit;
+const Deposit = ({ deposit }) => {
+  const { name, cashback, period } = deposit;
 
   return (
     <div className="deposit">
@@ -12,6 +12,6 @@ const Deposit = ({deposit}) => {
       <p className="deposit__period">Период: {period}</p>
     </div>
   );
-}
+};
 
 export default Deposit;

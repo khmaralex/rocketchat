@@ -9,19 +9,19 @@ const createMessageGroup = authorType => ({
   id: getId()
 });
 
-const generateMessageGroups = (messages) => {
+const generateMessageGroups = messages => {
   let messageGroups = [];
-  let lastAuthorType = '';
-  
-  messages.forEach((message) => {
+  let lastAuthorType = "";
+
+  messages.forEach(message => {
     const isMessageGroupsEmpty = !messageGroups.length;
     let hasAuthorChanged;
 
-    if(!isMessageGroupsEmpty){
+    if (!isMessageGroupsEmpty) {
       hasAuthorChanged = message.authorType !== lastAuthorType;
     }
 
-    if(isMessageGroupsEmpty || hasAuthorChanged){
+    if (isMessageGroupsEmpty || hasAuthorChanged) {
       messageGroups.push(createMessageGroup(message.authorType));
       lastAuthorType = message.authorType;
     }
@@ -30,26 +30,28 @@ const generateMessageGroups = (messages) => {
   });
 
   return messageGroups;
-}
+};
 
-class ChatContainer extends React.Component{
-  constructor(){
+class ChatContainer extends React.Component {
+  constructor() {
     super();
     this.chatRef = React.createRef();
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     const chatNode = this.chatRef.current;
 
     chatNode.scroll({
       top: chatNode.scrollHeight,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   }
 
-  render(){
-    return <Chat chatRef={this.chatRef} messageGroups={this.props.messageGroups} />;
+  render() {
+    return (
+      <Chat chatRef={this.chatRef} messageGroups={this.props.messageGroups} />
+    );
   }
 }
 

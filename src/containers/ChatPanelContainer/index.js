@@ -5,51 +5,51 @@ import {userSentMessage} from "actions";
 import {v4 as getId} from 'uuid';
 
 class ChatPanelContainer extends React.Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
-      message: ''
+      message: ""
     };
   }
 
-  sendTextMessage(){
-    if(this.state.message.length > 0){
+  sendTextMessage() {
+    if (this.state.message.length > 0) {
       this.props.submitMessage({
-        type: 'text',
-        authorType: 'user',
+        type: "text",
+        authorType: "user",
         id: getId(),
         messageData: this.state.message
       });
 
-      this.setState({message: ''});
+      this.setState({ message: "" });
     }
   }
 
-  handleSubmit(){
+  handleSubmit() {
     this.sendTextMessage();
   }
 
-  handleKeyPress(e){
+  handleKeyPress(e) {
     if (e.key === "Enter") {
       e.preventDefault();
       this.sendTextMessage();
     }
   }
 
-  handleChange(e){
-    this.setState({message: e.target.value});
+  handleChange(e) {
+    this.setState({ message: e.target.value });
   }
 
   render() {
     return (
       <ChatPanel
-        submitMessage={(message) => this.handleSubmit(message)}
-        onKeyPress={(e) => this.handleKeyPress(e)}
-        onChange={(e) => this.handleChange(e)}
+        submitMessage={message => this.handleSubmit(message)}
+        onKeyPress={e => this.handleKeyPress(e)}
+        onChange={e => this.handleChange(e)}
         message={this.state.message}
       />
-    )
+    );
   }
 }
 

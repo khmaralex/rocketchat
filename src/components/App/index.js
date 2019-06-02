@@ -20,12 +20,13 @@ const App = () => {
         </main>
 
         <aside className="aside">
-          <AsideMain/>
+          <AsideMain />
+
           <Route path="/(accounts|deposits)/:id" component={AsidePopup} />
         </aside>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

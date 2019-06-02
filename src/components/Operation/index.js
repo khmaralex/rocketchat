@@ -1,13 +1,9 @@
 import React from 'react';
 import './Operation.scss';
 
-const Operation = ({operation, sendOperationMessage}) => {
-
-  return(
-    <div
-      className="operation"
-      onClick={() => sendOperationMessage(operation)}
-    >
+const Operation = ({ operation, sendOperationMessage }) => {
+  return (
+    <div className="operation" onClick={() => sendOperationMessage(operation)}>
       <img className="operation__icon" src={operation.image} />
 
       <div className="operation__info">
@@ -17,9 +13,9 @@ const Operation = ({operation, sendOperationMessage}) => {
 
       <p className="operation__value">{operation.value} ₽</p>
 
-      <div className="operation__send-btn"></div>
+      <div className="operation__send-btn" />
     </div>
   );
-}
+};
 
 export default Operation;

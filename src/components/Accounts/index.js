@@ -7,11 +7,17 @@ const Accounts = ({ accounts }) => {
     isAccounts && (
       <div className="accounts">
         {accounts.map(account => {
-          return <Account key={account.id} account={account} isDisclosureButton={true} />;
+          return (
+            <Account
+              key={account.id}
+              account={account}
+              isDisclosureButton={true}
+            />
+          );
         })}
       </div>
     )
   );
-}
+};
 
 export default Accounts;
