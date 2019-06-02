@@ -4,7 +4,7 @@ import './Operation.scss';
 const Operation = ({ operation, sendOperationMessage }) => {
   return (
     <div className="operation" onClick={() => sendOperationMessage(operation)}>
-      <img className="operation__icon" src={operation.image} />
+      <img className="operation__icon" src={operation.image} alt="Операция" />
 
       <div className="operation__info">
         <p className="operation__info-name">{operation.name}</p>

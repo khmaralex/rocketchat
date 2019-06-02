@@ -7,7 +7,7 @@ const Account = ({account, isDisclosureButton}) => {
 
   return (
     <div className="account">
-      <img className="account-image" src={account.image} />
+      <img className="account-image" src={account.image} alt="Аккаунт" />
 
       <div className="account-info">
         <p className="account-info__number">Счёт № {account.id}</p>

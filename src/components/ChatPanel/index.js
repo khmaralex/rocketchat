@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatPanel.scss';
 
-const ChatPanel = ({ message, onChange, submitMessage, onKeyPress }) => {
+const ChatPanel = ({ message, onChange, submitMessage, onKeyPress, resetMessages }) => {
   return (
     <div className="chat-panel">
       <div className="chat-panel-btns">
@@ -9,6 +9,7 @@ const ChatPanel = ({ message, onChange, submitMessage, onKeyPress }) => {
         <div className="chat-panel-btns__item chat-panel-btns__item_stickers" />
         <div className="chat-panel-btns__item chat-panel-btns__item_pictures" />
         <div className="chat-panel-btns__item chat-panel-btns__item_docs" />
+        <div className="chat-panel-btns__item chat-panel-btns__item_trash" onClick={resetMessages} />
       </div>
 
       <div className="chat-panel-message">

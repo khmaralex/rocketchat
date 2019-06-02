@@ -5,14 +5,13 @@ import {
   GET_INITIAL_DATA_SUCCESS,
   GET_INITIAL_DATA_FAILURE,
   CLIENT_SENT_MESSAGE,
+  RESET_CHAT_MESSAGES,
   USER_SENT_MESSAGE
 } from "./constants";
 
 export const getInitialDataSuccess = data => ({type: GET_INITIAL_DATA_SUCCESS, payload: data});
 export const getInitialDataPending = () => ({type: GET_INITIAL_DATA_PENDING});
 export const getInitialDataFailure = () => ({type: GET_INITIAL_DATA_FAILURE});
-export const userSentMessage = message => ({type: USER_SENT_MESSAGE, payload: message});
-export const clientSentMessage = message => ({type: CLIENT_SENT_MESSAGE, payload: message});
 
 export function getInitialData() {
   return dispatch => {
@@ -27,3 +26,7 @@ export function getInitialData() {
       })
   };
 }
+
+export const userSentMessage = message => ({type: USER_SENT_MESSAGE, payload: message});
+export const clientSentMessage = message => ({type: CLIENT_SENT_MESSAGE, payload: message});
+export const resetChatMessages = () => ({type: RESET_CHAT_MESSAGES});

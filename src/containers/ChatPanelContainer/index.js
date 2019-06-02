@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import ChatPanel from "components/ChatPanel";
-import {userSentMessage} from "actions";
+import {userSentMessage, resetChatMessages} from "actions";
 import {v4 as getId} from 'uuid';
 
 class ChatPanelContainer extends React.Component {
@@ -11,6 +11,11 @@ class ChatPanelContainer extends React.Component {
     this.state = {
       message: ""
     };
+  }
+
+  resetMessages(){
+    localStorage.removeItem('chatState');
+    this.props.resetMessages();
   }
 
   sendTextMessage() {
@@ -47,6 +52,7 @@ class ChatPanelContainer extends React.Component {
         submitMessage={message => this.handleSubmit(message)}
         onKeyPress={e => this.handleKeyPress(e)}
         onChange={e => this.handleChange(e)}
+        resetMessages={() => this.resetMessages()}
         message={this.state.message}
       />
     );
@@ -55,7 +61,8 @@ class ChatPanelContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    submitMessage: message => dispatch(userSentMessage(message))
+    submitMessage: message => dispatch(userSentMessage(message)),
+    resetMessages: () => dispatch(resetChatMessages())
   };
 };
 

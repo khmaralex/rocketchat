@@ -8,7 +8,7 @@ const MessageGroup = ({ messageGroup }) => {
 
   return (
     <div className={"message-group" + isUserMessageGroup}>
-      <p className="message-group__author">Сережа</p>
+      <p className="message-group__author">Сергей</p>
 
       <div className="message-group__wrapper">
         <div className="message-group__author-icon" />

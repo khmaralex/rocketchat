@@ -31,7 +31,7 @@ const throttle = (func, ms) => {
 
 const configureStore = () => {
   const persistedState = loadState();
-  const THROTTLE_DELAY = 2000;
+  const THROTTLE_DELAY = 1000;
 
   const throttledSubscribeCb = throttle(() => {
     saveState({
