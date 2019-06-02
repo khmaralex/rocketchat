@@ -16,9 +16,7 @@ const generateMessageGroups = messages => {
   messages.forEach(message => {
     const isMessageGroupsEmpty = !messageGroups.length;
     let hasAuthorChanged;
-    if(message && !message.authorType){
-      debugger;
-    }
+
     if (!isMessageGroupsEmpty) {
       hasAuthorChanged = message.authorType !== lastAuthorType;
     }
