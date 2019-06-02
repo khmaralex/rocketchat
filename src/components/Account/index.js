@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import './Account.scss';
+import "./Account.scss";
 
-const Account = ({account, isDisclosureButton}) => {
+const Account = ({ account, isDisclosureButton }) => {
   const lastOperation = account.operations[account.operations.length - 1];
 
   return (
@@ -17,8 +17,7 @@ const Account = ({account, isDisclosureButton}) => {
           {account.interestRate}% годовых <br />
           Создан: {account.creationDate} <br />
           Последнее операция: <br />
-          {lastOperation.date} <br />
-          (<span>{lastOperation.value} ₽</span>)
+          {lastOperation.date} <br />(<span>{lastOperation.value} ₽</span>)
         </p>
       </div>
 

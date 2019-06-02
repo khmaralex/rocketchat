@@ -1,7 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
 import App from "components/App";
+import { connect } from "react-redux";
 import { getInitialData } from "actions";
+
 
 class AppContainer extends React.Component {
   componentDidMount() {

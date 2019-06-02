@@ -1,5 +1,5 @@
-import React from 'react';
-import OperationContainer from 'containers/OperationContainer';
+import React from "react";
+import OperationContainer from "containers/OperationContainer";
 
 const OperationsList = ({ operations }) => {
   return (

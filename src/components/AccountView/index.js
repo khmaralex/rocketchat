@@ -1,7 +1,7 @@
 import React from "react";
-import OperationsList from 'components/OperationsList';
-import Account from 'components/Account';
-import './AccountView.scss';
+import Account from "components/Account";
+import OperationsList from "components/OperationsList";
+import "./AccountView.scss";
 
 const AccountView = ({ account }) => {
   return (

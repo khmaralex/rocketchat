@@ -3,12 +3,9 @@ import { connect } from "react-redux";
 import Stickers from "components/Stickers";
 import { userSentMessage } from "actions";
 
-const StickersContainer = ({stickers, sendStickerMessage}) => {
+const StickersContainer = ({ stickers, sendStickerMessage }) => {
   return (
-    <Stickers
-      stickers={stickers}
-      sendStickerMessage={sendStickerMessage}
-    />
+    <Stickers stickers={stickers} sendStickerMessage={sendStickerMessage} />
   );
 };
 

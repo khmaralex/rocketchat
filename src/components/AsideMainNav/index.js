@@ -1,6 +1,6 @@
 import React from "react";
+import "./AsideMainNav.scss";
 import { NavLink } from "react-router-dom";
-import './AsideMainNav.scss';
 
 const AsideMainNav = () => {
   return (

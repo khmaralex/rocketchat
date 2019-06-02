@@ -1,6 +1,6 @@
 import React from "react";
-import Message from 'components/Message';
-import './MessageGroup.scss';
+import Message from "components/Message";
+import "./MessageGroup.scss";
 
 const MessageGroup = ({ messageGroup }) => {
   const { authorType, messages } = messageGroup;

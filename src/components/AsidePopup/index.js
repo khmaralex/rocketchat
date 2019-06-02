@@ -1,7 +1,7 @@
 import React from 'react';
-import './AsidePopup.scss';
-import AccountViewContainer from 'containers/AccountViewContainer';
 import { Route } from "react-router-dom";
+import AccountViewContainer from 'containers/AccountViewContainer';
+import './AsidePopup.scss';
 
 const AsidePopup = ({ history, match }) => {
   const goBack = () => history.push(`/${match.params[0]}`);

@@ -1,8 +1,8 @@
 import React from "react";
+import { v4 as getId } from "uuid";
 import { connect } from "react-redux";
 import ChatPanel from "components/ChatPanel";
-import {userSentMessage, resetChatMessages} from "actions";
-import {v4 as getId} from 'uuid';
+import { userSentMessage, resetChatMessages } from "actions";
 
 class ChatPanelContainer extends React.Component {
   constructor() {
@@ -11,6 +11,11 @@ class ChatPanelContainer extends React.Component {
     this.state = {
       message: ""
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.resetMessages = this.resetMessages.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   resetMessages(){
@@ -48,11 +53,11 @@ class ChatPanelContainer extends React.Component {
   render() {
     return (
       <ChatPanel
-        submitMessage={message => this.handleSubmit(message)}
-        onKeyPress={e => this.handleKeyPress(e)}
-        onChange={e => this.handleChange(e)}
-        resetMessages={() => this.resetMessages()}
+        onChange={this.handleChange}
         message={this.state.message}
+        onKeyPress={this.handleKeyPress}
+        submitMessage={this.handleSubmit}
+        resetMessages={this.resetMessages}
       />
     );
   }
@@ -60,8 +65,8 @@ class ChatPanelContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    submitMessage: message => dispatch(userSentMessage(message)),
-    resetMessages: () => dispatch(resetChatMessages())
+    resetMessages: () => dispatch(resetChatMessages()),
+    submitMessage: message => dispatch(userSentMessage(message))
   };
 };
 

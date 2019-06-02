@@ -1,8 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
-import Operation from "components/Operation";
-import { userSentMessage } from "actions";
 import { v4 as getId } from "uuid";
+import { connect } from "react-redux";
+import { userSentMessage } from "actions";
+import Operation from "components/Operation";
 
 const OperationContainer = ({ operation, sendOperationMessage }) => {
   return (

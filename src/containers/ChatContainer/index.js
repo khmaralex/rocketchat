@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
 import Chat from "components/Chat";
-import {v4 as getId} from "uuid";
+import { v4 as getId } from "uuid";
+import { connect } from "react-redux";
 
 const createMessageGroup = authorType => ({
   authorType,

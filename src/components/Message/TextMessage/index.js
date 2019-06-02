@@ -1,5 +1,5 @@
 import React from "react";
-import './TextMessage.scss';
+import "./TextMessage.scss";
 
 const TextMessage = ({ text }) => {
   return (

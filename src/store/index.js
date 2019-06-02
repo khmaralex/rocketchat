@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "../reducers";
 import middlewares from "../middlewares";
+import { createStore, applyMiddleware } from "redux";
 import { loadState, saveState } from "./localStorage";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const throttle = (func, ms) => {
   let isThrottled = false;

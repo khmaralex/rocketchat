@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
-import userData from "./userData";
 import chat from "./chat";
+import userData from "./userData";
+import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({ userData, chat });
 

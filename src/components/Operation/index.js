@@ -1,5 +1,5 @@
-import React from 'react';
-import './Operation.scss';
+import React from "react";
+import "./Operation.scss";
 
 const Operation = ({ operation, sendOperationMessage }) => {
   return (

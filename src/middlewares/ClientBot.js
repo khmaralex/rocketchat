@@ -20,7 +20,7 @@ class ClientBot {
       "Отмечал первый день лета и у меня куда-то пропало около 15к, можешь узнать куда?",
       "Ищу в операциях по всем счетам, не могу найти, может ты найдешь?",
       "...поищи операцию в счетах, пожалуйста",
-      "Это не то, что хотелось бы сейчас увидеть 🤔",
+      "Это точно не та операция, которую хотелось бы увидеть 🤔",
       "Мдааа... 🤯! Это оно! Спасибо.",
       "Сейчас не могу ответить, занят. [Автоответчик]",
       "Ясно, это та самая лягушка Пепе из комикса Boy’s Club"
@@ -46,9 +46,9 @@ class ClientBot {
     return new Promise(resolve => {
       let answer;
 
-      if(message.type === 'sticker'){
+      if (message.type === "sticker") {
         answer = this.createMessage(this.replicas[7], "text");
-      }else{
+      } else {
         if (this.state.isGreeted && !this.state.isProblemRequested) {
           answer = this.createMessage(this.replicas[1], "text");
           this.state.isProblemRequested = true;
@@ -85,7 +85,7 @@ class ClientBot {
           } else {
             answer = this.createMessage(this.replicas[6], "text");
           }
-        } 
+        }
       }
 
       setTimeout(() => resolve(answer), this.thinkDelay);

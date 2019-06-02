@@ -1,7 +1,6 @@
 import React from 'react';
 import './Deposit.scss';
 
-
 const Deposit = ({ deposit }) => {
   const { name, cashback, period } = deposit;
 

@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
+import AsideMain from "components/AsideMain";
+import AsidePopup from "components/AsidePopup";
 import ChatContainer from "containers/ChatContainer";
 import ChatPanelContainer from "containers/ChatPanelContainer";
-import AsideMain from 'components/AsideMain';
-import AsidePopup from "components/AsidePopup";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "./App.scss";
 
 const App = () => {
