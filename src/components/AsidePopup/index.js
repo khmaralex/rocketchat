@@ -3,10 +3,8 @@ import './AsidePopup.scss';
 import AccountViewContainer from 'containers/AccountViewContainer';
 import { Route } from "react-router-dom";
 
-const AsidePopup = ({ history }) => {
-  function goBack() {
-    history.goBack();
-  }
+const AsidePopup = ({ history, match }) => {
+  const goBack = () => history.push(`/${match.params[0]}`);
 
   return (
     <div className="aside-popup">

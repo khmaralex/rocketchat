@@ -7,7 +7,6 @@ const OperationMessage = ({ operation }) => {
       <img className="operation-message__icon" src={operation.image} />
       <p className="operation-message__name">{operation.name}</p>
       <p className="operation-message__value">{operation.value} ₽</p>
-      <p className="operation-message__bonus">+n рокетрубля</p>
     </div>
   );
 };
