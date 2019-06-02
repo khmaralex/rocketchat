@@ -8,7 +8,7 @@ const Operation = ({operation, sendOperationMessage}) => {
       className="operation"
       onClick={() => sendOperationMessage(operation)}
     >
-      <div className="operation__icon"></div>
+      <img className="operation__icon" src={operation.image} />
 
       <div className="operation__info">
         <p className="operation__info-name">{operation.name}</p>

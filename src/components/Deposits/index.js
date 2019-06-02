@@ -8,7 +8,7 @@ const Deposits = ({deposits}) => {
     isDeposits && (
       <div className="deposits">
         {deposits.map(deposit => {
-          return <Deposit deposit={deposit}/>
+          return <Deposit key={deposit.id} deposit={deposit}/>
         })}
       </div>
     )

@@ -1,4 +1,4 @@
-import {USER_SENT_MESSAGE} from 'actions/constants';
+import {USER_SENT_MESSAGE, CLIENT_SENT_MESSAGE} from 'actions/constants';
 
 const initialState = {
   messages: []
@@ -7,6 +7,7 @@ const initialState = {
 const chat = (state = initialState, action) => {
   switch (action.type) {
     case USER_SENT_MESSAGE:
+    case CLIENT_SENT_MESSAGE:
       return {...state, messages: [...state.messages, action.payload]};
     default:
       return state;

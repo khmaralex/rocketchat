@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ChatPanel from "components/ChatPanel";
 import {userSentMessage} from "actions";
+import {v4 as getId} from 'uuid';
 
 class ChatPanelContainer extends React.Component {
   constructor(){
@@ -13,13 +14,16 @@ class ChatPanelContainer extends React.Component {
   }
 
   sendTextMessage(){
-    this.props.submitMessage({
-      type: 'text',
-      author: 'user',
-      messageData: this.state.message
-    });
+    if(this.state.message.length > 0){
+      this.props.submitMessage({
+        type: 'text',
+        authorType: 'user',
+        id: getId(),
+        messageData: this.state.message
+      });
 
-    this.setState({message: ''});
+      this.setState({message: ''});
+    }
   }
 
   handleSubmit(){
@@ -29,10 +33,7 @@ class ChatPanelContainer extends React.Component {
   handleKeyPress(e){
     if (e.key === "Enter") {
       e.preventDefault();
-
-      if(this.state.message.length > 0){
-        this.sendTextMessage();
-      }
+      this.sendTextMessage();
     }
   }
 

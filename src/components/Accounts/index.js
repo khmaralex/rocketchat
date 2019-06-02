@@ -1,5 +1,4 @@
 import React from "react";
-import './Accounts.scss';
 import Account from 'components/Account';
 
 const Accounts = ({ accounts }) => {

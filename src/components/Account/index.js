@@ -7,7 +7,7 @@ const Account = ({account, isDisclosureButton}) => {
 
   return (
     <div className="account">
-      <div className="account-image"/>
+      <img className="account-image" src={account.image} />
 
       <div className="account-info">
         <p className="account-info__number">Счёт № {account.id}</p>
@@ -15,7 +15,7 @@ const Account = ({account, isDisclosureButton}) => {
 
         <p className="account-info__extra">
           {account.interestRate}% годовых <br />
-          Создан: {account.accountcreationDate} <br />
+          Создан: {account.creationDate} <br />
           Последнее операция: <br />
           {lastOperation.date} <br />
           (<span>{lastOperation.value} ₽</span>)

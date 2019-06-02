@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
-import Chat from "components/Chat";
+import ChatContainer from "containers/ChatContainer";
 import ChatPanelContainer from "containers/ChatPanelContainer";
 import AsideMain from 'components/AsideMain';
 import AsidePopup from "components/AsidePopup";
@@ -15,7 +15,7 @@ const App = () => {
 
       <div className="app">
         <main className="main">
-          <Chat />
+          <ChatContainer />
           <ChatPanelContainer />
         </main>
 

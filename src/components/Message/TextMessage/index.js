@@ -1,10 +1,10 @@
 import React from "react";
 import './TextMessage.scss';
 
-const TextMessage = () => {
+const TextMessage = ({text}) => {
   return (
     <div className="text-message">
-      <p>Да вот снова логотип не отображается</p>
+      <p>{text}</p>
     </div>
   );
 }

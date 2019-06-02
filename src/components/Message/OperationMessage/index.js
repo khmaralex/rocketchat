@@ -1,13 +1,13 @@
 import React from "react";
 import './OperationMessage.scss';
 
-const OperationMessage = () => {
+const OperationMessage = ({operation}) => {
   return(
     <div className="operation-message">
-      <div className="operation-message__icon"></div>
-      <p className="operation-message__name">Перекресток Экспресс</p>
-      <p className="operation-message__value">- 6200 ₽</p>
-      <p className="operation-message__bonus">+62 рокетрубля</p>
+      <img className="operation-message__icon" src={operation.image}/>
+      <p className="operation-message__name">{operation.name}</p>
+      <p className="operation-message__value">{operation.value} ₽</p>
+      <p className="operation-message__bonus">+n рокетрубля</p>
     </div>
   );
 }

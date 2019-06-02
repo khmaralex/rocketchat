@@ -14,7 +14,7 @@
     height: 30px;
     margin-right: 10px;
     border-radius: 50%;
-    background-color: white;
+    background: white url('./images/client.png') center / cover no-repeat;
   }
 
   &__inner{
@@ -30,15 +30,6 @@
   &__wrapper{
     display: flex;
   }
-
-  &__author-icon{
-
-  }
-
-  &__inner{
-
-  }
-
 
   &.message-group_user{
 

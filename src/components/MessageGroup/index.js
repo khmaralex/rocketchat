@@ -2,7 +2,8 @@ import React from "react";
 import Message from 'components/Message';
 import './MessageGroup.scss';
 
-const MessageGroup = ({authorType}) => {
+const MessageGroup = ({messageGroup}) => {
+  const {authorType, messages} = messageGroup;
   const isUserMessageGroup = (authorType === 'user') ? ` message-group_user` : '';
 
   return(
@@ -13,13 +14,10 @@ const MessageGroup = ({authorType}) => {
         <div className="message-group__author-icon"></div>
 
         <div className="message-group__inner">
-          <Message type={'text'}/>
-          <Message type={'text'}/>
-          <Message type={'text'}/>
-          <Message type={'operation'}/>
+          {messages.map(message => <Message key={message.id} message={message}/>)}
         </div>
       </div>
-    </div>
+    </div> 
   );
 };
 

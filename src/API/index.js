@@ -1,11 +1,13 @@
-import data from './data.json';
+import data from './data';
+
+const SERVER_DELAY = 500;
 
 const API = {
-  async getData(){
+  getData(){
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(data);
-      }, 500);
+      }, SERVER_DELAY);
     })
   }
 }
