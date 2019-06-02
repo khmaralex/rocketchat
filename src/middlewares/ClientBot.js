@@ -1,5 +1,6 @@
 import { v4 as getId } from "uuid";
 import { clientSentMessage } from "actions";
+import { bigIntLiteral } from "@babel/types";
 
 class ClientBot {
   constructor(name) {
@@ -7,22 +8,30 @@ class ClientBot {
     this.authorType = "client";
     this.thinkDelay = 1000;
 
+    this.state = {
+      isGreeted: false,
+      isProblemRequested: false,
+      isOperationRequested: false,
+      isProblemSolved: false,
+      isResult: false
+    };
+
     this.replicas = [
-      "Привет! Мне нужна помощь!",
-      "Можешь прислать мне последнюю операцию?",
-      "Реплика 3",
-      "Реплика 4",
-      "Реплика 5",
-      "Реплика 6",
-      "Реплика 7"
+      "Привет! Мне нужна помощь! 😔",
+      "Отмечал первый день лета и у меня куда-то пропало около 15к, можешь узнать куда?",
+      "Ищу в операциях по всем счетам, не могу найти, может ты найдешь?",
+      "...поищи операцию в счетах, пожалуйста",
+      "Это не то, что хотелось бы сейчас увидеть 🤔",
+      "Мдааа... 🤯! Это оно! Спасибо.",
+      "Сейчас не могу отвечать, занят. [Автоответчик]"
     ];
   }
 
-  sendMessage(message, dispatch){
+  sendMessage(message, dispatch) {
     dispatch(clientSentMessage(message));
   }
 
-  createMessage(messageData, messageType){
+  createMessage(messageData, messageType) {
     const message = {
       type: messageType,
       authorType: this.authorType,
@@ -31,13 +40,6 @@ class ClientBot {
     };
 
     return message;
-  }
-
-  getAnswerAfterTextMessage() {
-    const randomIndex = Math.floor(Math.random() * this.replicas.length);
-    const randomReplic = this.replicas[randomIndex];
-
-    return this.createMessage(randomReplic, 'text');
   }
 
   getAnswerAfterOperationMessage(message) {
@@ -51,13 +53,45 @@ class ClientBot {
   thinkAboutMessage(message) {
     return new Promise(resolve => {
       let answer;
-      
-      if(message.type === "text"){
-        answer = this.getAnswerAfterTextMessage()
-      }else{
-        answer = this.getAnswerAfterOperationMessage(message);
-      }      
-      
+
+      if (this.state.isGreeted && !this.state.isProblemRequested) {
+        answer = this.createMessage(this.replicas[1], "text");
+        this.state.isProblemRequested = true;
+      } else if (
+        this.state.isProblemRequested &&
+        !this.state.isOperationRequested
+      ) {
+        answer = this.createMessage(this.replicas[2], "text");
+        this.state.isOperationRequested = true;
+      } else if (
+        this.state.isOperationRequested &&
+        !this.state.isProblemSolved
+      ) {
+        if (message.type === "text") {
+          answer = this.createMessage(this.replicas[3], "text");
+        } else {
+          let isSameOperation = message.messageData.id === 18;
+
+          if (isSameOperation) {
+            answer = this.createMessage(this.replicas[5], "text");
+            this.state.isProblemSolved = true;
+            this.state.isResult = true;
+          } else {
+            answer = this.createMessage(this.replicas[4], "text");
+          }
+        }
+      } else if (this.state.isProblemSolved && !this.state.isResult) {
+        answer = this.createMessage(this.replicas[5], "text");
+      } else {
+        if (this.state.isGreeted === false) {
+          this.state.isGreeted = true;
+          this.state.isProblemRequested = true;
+          answer = this.createMessage(this.replicas[1], "text");
+        } else {
+          answer = this.createMessage(this.replicas[6], "text");
+        }
+      }
+
       setTimeout(() => resolve(answer), this.thinkDelay);
     });
   }
@@ -65,14 +99,15 @@ class ClientBot {
   replyToMessage(message, dispatch) {
     this.thinkAboutMessage(message).then(answer => {
       this.sendMessage(answer, dispatch);
-    })
+    });
   }
 
-  sayHi(dispatch){
+  init(dispatch) {
     setTimeout(() => {
-      const message = this.createMessage(this.replicas[0], 'text');
-      this.sendMessage(message, dispatch);
-    }, this.thinkDelay); 
+      const firstMessage = this.createMessage(this.replicas[0], "text");
+      this.sendMessage(firstMessage, dispatch);
+      this.state.isGreeted = true;
+    }, this.thinkDelay);
   }
 }
 

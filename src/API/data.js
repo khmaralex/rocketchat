@@ -74,10 +74,10 @@ const data = {
         },
         {
           "id": 8,
-          "name": "Макдоналдс",
+          "name": "Снятие с карты",
           "image": operationImage,
           "date": "23 мая 13:55",
-          "value": -258
+          "value": -200
         },
         {
           "id": 9,
@@ -144,8 +144,7 @@ const data = {
           "name": "Снятие с карты",
           "image": operationImage,
           "date": "23 января 13:55",
-          "value": -620,
-          "currency": "$"
+          "value": -620
         },
         {
           "id": 17,
@@ -156,10 +155,10 @@ const data = {
         },
         {
           "id": 18,
-          "name": "Пополнение с карты",
+          "name": "Бухло",
           "image": operationImage,
-          "date": "23 января 13:55",
-          "value": 340
+          "date": "1 июня 03:55",
+          "value": -15650
         }
       ]
     }
