@@ -1,6 +1,6 @@
 import data from './data';
 
-const SERVER_DELAY = 500;
+const SERVER_DELAY = 0;
 
 const API = {
   getData(){

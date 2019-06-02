@@ -32,8 +32,25 @@ const generateMessageGroups = (messages) => {
   return messageGroups;
 }
 
-const ChatContainer = ({messageGroups}) => {
-  return <Chat messageGroups={messageGroups} />;
+class ChatContainer extends React.Component{
+  constructor(){
+    super();
+    this.chatRef = React.createRef();
+  }
+
+  componentDidUpdate(){
+    const chatNode = this.chatRef.current;
+
+    chatNode.scroll({
+      top: chatNode.scrollHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  render(){
+    return <Chat chatRef={this.chatRef} messageGroups={this.props.messageGroups} />;
+  }
 }
 
 const mapStateToProps = state => ({
